@@ -1,0 +1,17 @@
+defaults: &defaults
+  adapter: postgresql
+  encoding: unicode
+  user: jrae
+  password:
+  pool: 5
+
+development:
+  <<: *defaults
+  database: hooping_champs_dev
+
+test: &TEST
+  <<: *defaults
+  database: hooping_champs_test
+
+cucumber:
+  <<: *TEST

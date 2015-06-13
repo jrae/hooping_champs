@@ -1,0 +1,5 @@
+= link_to project_path(project) do
+  .search-project--client
+    =image_tag project.image.url(:small), class: "avatar search_project"
+    =project.name
+    =project.description

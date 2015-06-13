@@ -9,11 +9,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    begin
-      debugger
-      Project.create(project_params)
-    rescue ActiveRecord::RecordNotFound
-    end
+    Project.create(project_params)
     redirect_to root_path
   end
 

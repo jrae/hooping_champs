@@ -41,7 +41,9 @@ CREATE TABLE projects (
     image_file_name character varying(255),
     image_content_type character varying(255),
     image_file_size integer,
-    image_updated_at timestamp without time zone
+    image_updated_at timestamp without time zone,
+    scale integer,
+    search_tags character varying(255)[] DEFAULT '{}'::character varying[]
 );
 
 
@@ -102,4 +104,6 @@ CREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations USING btree (v
 SET search_path TO "$user",public;
 
 INSERT INTO schema_migrations (version) VALUES ('20150613135108');
+
+INSERT INTO schema_migrations (version) VALUES ('20150613165904');
 

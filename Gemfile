@@ -19,6 +19,7 @@ gem 'haml-rails'
 gem 'jquery-rails'
 gem 'paperclip'
 gem 'formtastic'
+gem 'acts-as-taggable-array-on'
 
 group :development, :test do
   gem 'byebug'

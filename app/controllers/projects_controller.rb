@@ -23,7 +23,7 @@ class ProjectsController < ApplicationController
 
   def project_params
     if params[:project]
-      params.require(:project).permit(:name, :description, :motivation, :avatar)
+      params.require(:project).permit(:name, :description, :motivation, :image, :search_tags, :scale)
     end
   end
 

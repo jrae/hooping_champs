@@ -1,0 +1,14 @@
+= title "New Project"
+
+= semantic_form_for(@project) do |f|
+  / = f.error_messages
+
+  = f.inputs "Please enter some overrall details" do
+    = f.input :name
+    = f.input :description
+    = f.input :motivation
+  = f.inputs "If you have an image please attach" do
+    = f.input :image
+  = f.actions do
+    = f.action :submit
+    = f.action :cancel
